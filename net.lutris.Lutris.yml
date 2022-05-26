@@ -2,6 +2,7 @@ id: net.winegame.client
 sdk: org.gnome.Sdk
 runtime: org.gnome.Platform
 runtime-version: '42'
+separate-locales: false
 command: lutris-wrapper
 rename-icon: lutris
 copy-icon: true
