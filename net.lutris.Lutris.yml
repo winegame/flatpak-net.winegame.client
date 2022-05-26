@@ -1,4 +1,4 @@
-id: net.lutris.Lutris
+id: net.winegame.client
 sdk: org.gnome.Sdk
 runtime: org.gnome.Platform
 runtime-version: '42'
@@ -20,6 +20,8 @@ finish-args:
   - --system-talk-name=org.freedesktop.UDisks2
   - --filesystem=home
   - --filesystem=/run/media
+  # For Deepin
+  - --filesystem=/data
   # For Debian
   - --filesystem=/media
   - --filesystem=~/.var/app/com.valvesoftware.Steam:ro
@@ -615,13 +617,10 @@ modules:
     buildsystem: simple
     build-commands:
       - python3 setup.py install --prefix=/app --root=/
-    post-install:
-      - desktop-file-edit --set-key=X-Flatpak-RenamedFrom --set-value="lutris.desktop;"
-        /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: git
-        url: https://github.com/lutris/lutris.git
-        commit: e9a26e94f2a73b3904999495a2e57b54204ce825
+        url: https://gitee.com/winegame/lutris.git
+        commit: b0cb4faecadd361d38a3e852ff2a65e2a4dfc099
     modules:
       - name: gnome-desktop
         buildsystem: meson
@@ -747,3 +746,11 @@ modules:
         path: lutris_wrapper
     build-commands:
       - python3 -mpip install . --prefix=/app --no-index --find-links .
+
+  - name: desktop
+    buildsystem: simple
+    build-commands:
+      - install -D net.winegame.client.desktop /app/share/applications/net.winegame.client.desktop
+    sources:
+      - type: file
+        path: net.winegame.client.desktop
