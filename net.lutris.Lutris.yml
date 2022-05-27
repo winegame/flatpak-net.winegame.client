@@ -3,7 +3,7 @@ sdk: org.gnome.Sdk
 runtime: org.gnome.Platform
 runtime-version: '42'
 separate-locales: false
-command: lutris-wrapper
+command: winegame
 rename-icon: lutris
 copy-icon: true
 base: org.winehq.Wine
@@ -748,10 +748,11 @@ modules:
     build-commands:
       - python3 -mpip install . --prefix=/app --no-index --find-links .
 
-  - name: desktop
+  - name: winegame
     buildsystem: simple
     build-commands:
       - install -D net.winegame.client.desktop /app/share/applications/net.winegame.client.desktop
+      - install -D winegame /app/bin/winegame
     sources:
-      - type: file
-        path: net.winegame.client.desktop
+      - type: dir
+        path: winegame
