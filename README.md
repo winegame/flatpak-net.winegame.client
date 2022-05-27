@@ -1,3 +1,15 @@
+# WineGame on Flatpak
+
+Wine游戏助手是 [Lutris](https://github.com/flathub/net.lutris.Lutris) 的中国定制版，有[单独的服务器](https://winegame.net/home)和[可安装游戏列表](https://winegame.net/games/)。
+
+This is a customized version of Lutris for Chinese users, with [an independent server](https://winegame.net/home) and [installable games](https://winegame.net/games/).
+
+---
+
+以下是上游项目 [Lutris](https://github.com/flathub/net.lutris.Lutris) 的说明。
+
+The following is the description of the upstream project [Lutris](https://github.com/flathub/net.lutris.Lutris).
+
 # Lutris on Flatpak
 
 [Lutris](https://lutris.net) is a video game preservation project.
