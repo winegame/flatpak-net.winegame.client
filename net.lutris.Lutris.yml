@@ -615,9 +615,7 @@ modules:
     sources: *ncurses_sources
 
   - name: lutris
-    buildsystem: simple
-    build-commands:
-      - python3 setup.py install --prefix=/app --root=/
+    buildsystem: meson
     sources:
       - type: git
         url: https://gitee.com/winegame/lutris.git
