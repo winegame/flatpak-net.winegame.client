@@ -619,7 +619,7 @@ modules:
     sources:
       - type: git
         url: https://gitee.com/winegame/lutris.git
-        commit: b0cb4faecadd361d38a3e852ff2a65e2a4dfc099
+        commit: 223e3585f35a793d593fdcd451aef3305a5e8a8a
     modules:
       - name: gnome-desktop
         buildsystem: meson
